@@ -22,8 +22,7 @@ def printOut(np_table_data):
     right = np_table_data[:, 2].astype(int)
 
 
-    sorted = np.lexsort((right, left))
-    np_table_data = np_table_data[sorted]
+    
 
     temp_array = np.empty(([max(right)+1, max(left)+1]), dtype=str)
 
