@@ -21,8 +21,6 @@ def printOut(np_table_data):
     left = np_table_data[:, 0].astype(int)
     right = np_table_data[:, 2].astype(int)
 
-    
-
 
     sorted = np.lexsort((right, left))
     np_table_data = np_table_data[sorted]
@@ -35,7 +33,6 @@ def printOut(np_table_data):
     for x in np_table_data:
         secret_message[int(x[2])][int(x[0])] = x[1]
 
-    print(secret_message)
     
     
     for x in secret_message[::-1]:
@@ -43,10 +40,7 @@ def printOut(np_table_data):
             print(y, end='')
         print()
         
-
+def runProgram(url):
+    printOut(readIn(url))
     
 
-# printOut(readIn("https://docs.google.com/document/d/e/2PACX-1vTMOmshQe8YvaRXi6gEPKKlsC6UpFJSMAk4mQjLm_u1gmHdVVTaeh7nBNFBRlui0sTZ-snGwZM4DBCT/pub"))
-
-printOut(readIn("https://docs.google.com/document/d/e/2PACX-1vRPzbNQcx5UriHSbZ-9vmsTow_R6RRe7eyAU60xIF9Dlz-vaHiHNO2TKgDi7jy4ZpTpNqM7EvEcfr_p/pub"))
-#
